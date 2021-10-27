@@ -2,17 +2,18 @@ from flask import Flask
 from flask import request
 from dotenv import load_dotenv
 
+from routes.api import api
+
 load_dotenv()
 
 
 app = Flask(__name__)
+app.register_blueprint(api, url_prefix='/api')
 
-@app.route('/', methods=["POST", "GET"])
-def test(): 
-    if request.method == "GET":
-        print('hi')
-    return 'hello'
-
+@app.route('/')
+def index(): 
+    # at some point return text instructions for API
+    return 'this is /'
 
 
 if __name__ == '__main__':
