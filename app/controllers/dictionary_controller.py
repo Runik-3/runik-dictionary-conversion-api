@@ -1,3 +1,4 @@
 
-#def dictionary_controller(target, input_file):
+#def dictionary_controller(target_device, dictionary_title):
+
 

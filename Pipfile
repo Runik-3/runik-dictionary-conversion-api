@@ -10,11 +10,12 @@ requests = "*"
 pyglossary = "*"
 prompt-toolkit = "*"
 lxml = "*"
+async = "*"
 
 [dev-packages]
 
 [scripts]
-server = "python3 app.py"
+server = "python3 server.py"
 
 [requires]
 python_version = "3.9"

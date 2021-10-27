@@ -2,7 +2,7 @@ from flask import Flask
 from flask import request
 from dotenv import load_dotenv
 
-from routes.api import api
+from routes.api_route import api
 
 load_dotenv()
 
