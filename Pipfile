@@ -13,6 +13,7 @@ lxml = "*"
 async = "*"
 
 [dev-packages]
+autopep8 = "*"
 
 [scripts]
 server = "python3 server.py"
