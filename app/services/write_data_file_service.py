@@ -1,6 +1,6 @@
-import os
+from os import path
 
-dirname = os.path.join(os.path.dirname(__file__), '..',
+dirname = path.join(path.dirname(__file__), '..',
                        '..', 'dictionaries', 'input', 'input.xdxf')
 
 
