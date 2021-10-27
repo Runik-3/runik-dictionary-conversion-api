@@ -1,0 +1,1321 @@
+[
+	{
+		"name": "Aard2Slob",
+		"description": "Aard 2 (.slob)",
+		"extensions": [
+			".slob"
+		],
+		"singleFile": true,
+		"optionsProp": {
+			"compression": {
+				"class": "StrOption",
+				"type": "str",
+				"customValue": false,
+				"values": [
+					"",
+					"bz2",
+					"zlib",
+					"lzma2"
+				],
+				"comment": "Compression Algorithm"
+			},
+			"content_type": {
+				"class": "StrOption",
+				"type": "str",
+				"customValue": true,
+				"values": [
+					"text/plain; charset=utf-8",
+					"text/html; charset=utf-8"
+				],
+				"comment": "Content Type"
+			},
+			"file_size_approx": {
+				"class": "FileSizeOption",
+				"type": "int",
+				"customValue": true,
+				"comment": "split up by given approximate file size\nexamples: 100m, 1g"
+			},
+			"separate_alternates": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "add alternate headwords as separate entries to slob"
+			},
+			"word_title": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "add headwords title to begining of definition"
+			}
+		},
+		"canRead": true,
+		"canWrite": true,
+		"readOptions": {},
+		"writeOptions": {
+			"compression": "zlib",
+			"content_type": "",
+			"file_size_approx": 0,
+			"separate_alternates": false,
+			"word_title": false
+		}
+	},
+	{
+		"name": "ABCMedicalNotes",
+		"description": "ABC Medical Notes (SQLite3)",
+		"extensions": [],
+		"singleFile": false,
+		"optionsProp": {},
+		"canRead": true,
+		"canWrite": false,
+		"readOptions": {}
+	},
+	{
+		"name": "Almaany",
+		"description": "Almaany.com (SQLite3)",
+		"extensions": [],
+		"singleFile": false,
+		"optionsProp": {},
+		"canRead": true,
+		"canWrite": false,
+		"readOptions": {}
+	},
+	{
+		"name": "AppleDict",
+		"description": "AppleDict Source",
+		"extensions": [
+			".apple"
+		],
+		"singleFile": false,
+		"optionsProp": {
+			"clean_html": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "use BeautifulSoup parser"
+			},
+			"css": {
+				"class": "StrOption",
+				"type": "str",
+				"customValue": true,
+				"comment": "custom .css file path"
+			},
+			"xsl": {
+				"class": "StrOption",
+				"type": "str",
+				"customValue": true,
+				"comment": "custom XSL transformations file path"
+			},
+			"default_prefs": {
+				"class": "DictOption",
+				"type": "dict",
+				"customValue": true,
+				"comment": "default prefs in python dict format"
+			},
+			"prefs_html": {
+				"class": "StrOption",
+				"type": "str",
+				"customValue": true,
+				"comment": "preferences XHTML file path"
+			},
+			"front_back_matter": {
+				"class": "StrOption",
+				"type": "str",
+				"customValue": true,
+				"comment": "XML file path with top-level tag"
+			},
+			"jing": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "run Jing check on generated XML"
+			},
+			"indexes": {
+				"class": "StrOption",
+				"type": "str",
+				"customValue": false,
+				"values": [
+					"",
+					"ru",
+					"zh"
+				],
+				"comment": "Additional indexes to dictionary entries"
+			}
+		},
+		"canRead": false,
+		"canWrite": true,
+		"writeOptions": {
+			"clean_html": true,
+			"css": "",
+			"default_prefs": null,
+			"front_back_matter": "",
+			"indexes": "",
+			"jing": false,
+			"prefs_html": "",
+			"xsl": ""
+		}
+	},
+	{
+		"name": "AppleDictBin",
+		"description": "AppleDict Binary",
+		"extensions": [
+			".dictionary",
+			".data"
+		],
+		"singleFile": true,
+		"optionsProp": {
+			"html": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Entries are HTML"
+			}
+		},
+		"canRead": true,
+		"canWrite": false,
+		"readOptions": {
+			"html": true
+		}
+	},
+	{
+		"name": "BabylonBgl",
+		"description": "Babylon (.BGL)",
+		"extensions": [
+			".bgl"
+		],
+		"singleFile": true,
+		"optionsProp": {
+			"default_encoding_overwrite": {
+				"class": "EncodingOption",
+				"type": "str",
+				"customValue": true,
+				"comment": "Default encoding (overwrite)"
+			},
+			"source_encoding_overwrite": {
+				"class": "EncodingOption",
+				"type": "str",
+				"customValue": true,
+				"comment": "Source encoding (overwrite)"
+			},
+			"target_encoding_overwrite": {
+				"class": "EncodingOption",
+				"type": "str",
+				"customValue": true,
+				"comment": "Target encoding (overwrite)"
+			},
+			"part_of_speech_color": {
+				"class": "HtmlColorOption",
+				"type": "str",
+				"customValue": true,
+				"comment": "Color for Part of Speech"
+			},
+			"no_control_sequence_in_defi": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "No control sequence in definitions"
+			},
+			"strict_string_convertion": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Strict string convertion"
+			},
+			"process_html_in_key": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Process HTML in (entry or info) key"
+			},
+			"key_rstrip_chars": {
+				"class": "StrOption",
+				"type": "str",
+				"customValue": true,
+				"comment": "Characters to strip from right-side of keys"
+			},
+			"search_char_samples": {
+				"class": "BoolOption",
+				"type": "bool"
+			},
+			"collect_metadata2": {
+				"class": "BoolOption",
+				"type": "bool"
+			},
+			"write_gz": {
+				"class": "BoolOption",
+				"type": "bool"
+			},
+			"char_samples_path": {
+				"class": "StrOption",
+				"type": "str",
+				"customValue": true
+			},
+			"msg_log_path": {
+				"class": "StrOption",
+				"type": "str",
+				"customValue": true
+			},
+			"raw_dump_path": {
+				"class": "StrOption",
+				"type": "str",
+				"customValue": true
+			},
+			"unpacked_gzip_path": {
+				"class": "StrOption",
+				"type": "str",
+				"customValue": true
+			}
+		},
+		"canRead": true,
+		"canWrite": false,
+		"readOptions": {
+			"default_encoding_overwrite": "",
+			"key_rstrip_chars": "",
+			"no_control_sequence_in_defi": false,
+			"part_of_speech_color": "007000",
+			"process_html_in_key": false,
+			"source_encoding_overwrite": "",
+			"strict_string_convertion": false,
+			"target_encoding_overwrite": ""
+		}
+	},
+	{
+		"name": "CC-CEDICT",
+		"description": "CC-CEDICT",
+		"extensions": [
+			".u8"
+		],
+		"singleFile": true,
+		"optionsProp": {
+			"encoding": {
+				"class": "EncodingOption",
+				"type": "str",
+				"customValue": true,
+				"comment": "Encoding/charset"
+			},
+			"traditional_title": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Use traditional Chinese for entry titles/keys"
+			}
+		},
+		"canRead": true,
+		"canWrite": false,
+		"readOptions": {
+			"encoding": "utf-8",
+			"traditional_title": false
+		}
+	},
+	{
+		"name": "cc-kedict",
+		"description": "cc-kedict",
+		"extensions": [],
+		"singleFile": true,
+		"optionsProp": {},
+		"canRead": true,
+		"canWrite": false,
+		"readOptions": {}
+	},
+	{
+		"name": "CrawlerDir",
+		"description": "Crawler Directory",
+		"extensions": [
+			".crawler"
+		],
+		"singleFile": true,
+		"optionsProp": {
+			"compression": {
+				"class": "StrOption",
+				"type": "str",
+				"customValue": false,
+				"values": [
+					"",
+					"gz",
+					"bz2",
+					"lzma"
+				],
+				"comment": "Compression Algorithm"
+			}
+		},
+		"canRead": true,
+		"canWrite": true,
+		"readOptions": {},
+		"writeOptions": {
+			"compression": ""
+		}
+	},
+	{
+		"name": "Csv",
+		"description": "CSV (.csv)",
+		"extensions": [
+			".csv"
+		],
+		"singleFile": true,
+		"optionsProp": {
+			"encoding": {
+				"class": "EncodingOption",
+				"type": "str",
+				"customValue": true,
+				"comment": "Encoding/charset"
+			},
+			"resources": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Enable resources / data files"
+			},
+			"delimiter": {
+				"class": "Option",
+				"type": "str",
+				"customValue": true,
+				"values": [
+					",",
+					";",
+					"@"
+				]
+			},
+			"add_defi_format": {
+				"class": "BoolOption",
+				"type": "bool"
+			},
+			"enable_info": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Enable glossary info / metedata"
+			},
+			"word_title": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "add headwords title to begining of definition"
+			}
+		},
+		"canRead": true,
+		"canWrite": true,
+		"readOptions": {
+			"delimiter": ",",
+			"encoding": "utf-8"
+		},
+		"writeOptions": {
+			"add_defi_format": false,
+			"delimiter": ",",
+			"enable_info": true,
+			"encoding": "utf-8",
+			"resources": true,
+			"word_title": false
+		}
+	},
+	{
+		"name": "Dicformids",
+		"description": "DictionaryForMIDs",
+		"extensions": [
+			".mids"
+		],
+		"singleFile": false,
+		"optionsProp": {},
+		"canRead": true,
+		"canWrite": true,
+		"readOptions": {},
+		"writeOptions": {}
+	},
+	{
+		"name": "Dictcc",
+		"description": "Dict.cc (SQLite3)",
+		"extensions": [],
+		"singleFile": false,
+		"optionsProp": {},
+		"canRead": true,
+		"canWrite": false,
+		"readOptions": {}
+	},
+	{
+		"name": "Dictcc_split",
+		"description": "Dict.cc (SQLite3) - Split",
+		"extensions": [],
+		"singleFile": false,
+		"optionsProp": {},
+		"canRead": true,
+		"canWrite": false,
+		"readOptions": {}
+	},
+	{
+		"name": "DictOrg",
+		"description": "DICT.org file format (.index)",
+		"extensions": [
+			".index"
+		],
+		"singleFile": false,
+		"optionsProp": {
+			"dictzip": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Compress .dict file to .dict.dz"
+			},
+			"install": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Install dictionary to /usr/share/dictd/"
+			}
+		},
+		"canRead": true,
+		"canWrite": true,
+		"readOptions": {},
+		"writeOptions": {
+			"dictzip": false,
+			"install": true
+		}
+	},
+	{
+		"name": "DictOrgSource",
+		"description": "DICT.org dictfmt source file",
+		"extensions": [
+			".dtxt"
+		],
+		"singleFile": true,
+		"optionsProp": {
+			"remove_html_all": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Remove all HTML tags"
+			}
+		},
+		"canRead": false,
+		"canWrite": true,
+		"writeOptions": {
+			"remove_html_all": true
+		}
+	},
+	{
+		"name": "Dictunformat",
+		"description": "dictunformat output file",
+		"extensions": [
+			".dictunformat"
+		],
+		"singleFile": true,
+		"optionsProp": {
+			"encoding": {
+				"class": "EncodingOption",
+				"type": "str",
+				"customValue": true,
+				"comment": "Encoding/charset"
+			}
+		},
+		"canRead": true,
+		"canWrite": false,
+		"readOptions": {
+			"encoding": "utf-8"
+		}
+	},
+	{
+		"name": "DigitalNK",
+		"description": "DigitalNK (SQLite3, N-Korean)",
+		"extensions": [],
+		"singleFile": false,
+		"optionsProp": {},
+		"canRead": true,
+		"canWrite": false,
+		"readOptions": {}
+	},
+	{
+		"name": "ABBYYLingvoDSL",
+		"description": "ABBYY Lingvo DSL (.dsl)",
+		"extensions": [
+			".dsl"
+		],
+		"singleFile": true,
+		"optionsProp": {
+			"encoding": {
+				"class": "EncodingOption",
+				"type": "str",
+				"customValue": true,
+				"comment": "Encoding/charset"
+			},
+			"audio": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Enable audio objects"
+			},
+			"only_fix_markup": {
+				"class": "BoolOption",
+				"type": "bool"
+			}
+		},
+		"canRead": true,
+		"canWrite": false,
+		"readOptions": {
+			"audio": false,
+			"encoding": "",
+			"only_fix_markup": false
+		}
+	},
+	{
+		"name": "Epub2",
+		"description": "EPUB-2 E-Book",
+		"extensions": [
+			".epub"
+		],
+		"singleFile": false,
+		"optionsProp": {
+			"group_by_prefix_length": {
+				"class": "IntOption",
+				"type": "int",
+				"customValue": true,
+				"comment": "Prefix length for grouping"
+			},
+			"compress": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Enable compression"
+			},
+			"keep": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Keep temp files"
+			},
+			"include_index_page": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Include index page"
+			},
+			"apply_css": {
+				"class": "StrOption",
+				"type": "str",
+				"customValue": true,
+				"comment": "Path to css file"
+			},
+			"cover_path": {
+				"class": "StrOption",
+				"type": "str",
+				"customValue": true,
+				"comment": "Path to cover file"
+			}
+		},
+		"canRead": false,
+		"canWrite": true,
+		"writeOptions": {
+			"apply_css": "",
+			"compress": true,
+			"cover_path": "",
+			"group_by_prefix_length": 2,
+			"include_index_page": false,
+			"keep": false
+		}
+	},
+	{
+		"name": "Kobo",
+		"description": "Kobo E-Reader Dictionary",
+		"extensions": [
+			".kobo"
+		],
+		"singleFile": false,
+		"optionsProp": {},
+		"canRead": false,
+		"canWrite": true,
+		"writeOptions": {}
+	},
+	{
+		"name": "Dictfile",
+		"description": "Kobo E-Reader Dictfile (.df)",
+		"extensions": [
+			".df"
+		],
+		"singleFile": false,
+		"optionsProp": {
+			"encoding": {
+				"class": "EncodingOption",
+				"type": "str",
+				"customValue": true,
+				"comment": "Encoding/charset"
+			},
+			"extract_inline_images": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Extract inline images"
+			}
+		},
+		"canRead": true,
+		"canWrite": true,
+		"readOptions": {
+			"encoding": "utf-8",
+			"extract_inline_images": true
+		},
+		"writeOptions": {
+			"encoding": "utf-8"
+		}
+	},
+	{
+		"name": "Mobi",
+		"description": "Mobipocket (.mobi) E-Book",
+		"extensions": [
+			".mobi"
+		],
+		"singleFile": false,
+		"optionsProp": {
+			"group_by_prefix_length": {
+				"class": "IntOption",
+				"type": "int",
+				"customValue": true,
+				"comment": "Prefix length for grouping"
+			},
+			"kindlegen_path": {
+				"class": "StrOption",
+				"type": "str",
+				"customValue": true,
+				"comment": "Path to kindlegen executable"
+			},
+			"compress": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Enable compression",
+				"disabled": true
+			},
+			"keep": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Keep temp files",
+				"disabled": true
+			},
+			"include_index_page": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Include index page",
+				"disabled": true
+			},
+			"apply_css": {
+				"class": "StrOption",
+				"type": "str",
+				"customValue": true,
+				"comment": "Path to css file",
+				"disabled": true
+			},
+			"cover_path": {
+				"class": "StrOption",
+				"type": "str",
+				"customValue": true,
+				"comment": "Path to cover file",
+				"disabled": true
+			}
+		},
+		"canRead": false,
+		"canWrite": true,
+		"writeOptions": {
+			"group_by_prefix_length": 2,
+			"kindlegen_path": ""
+		}
+	},
+	{
+		"name": "Edlin",
+		"description": "EDLIN",
+		"extensions": [
+			".edlin"
+		],
+		"singleFile": false,
+		"optionsProp": {
+			"encoding": {
+				"class": "EncodingOption",
+				"type": "str",
+				"customValue": true,
+				"comment": "Encoding/charset"
+			},
+			"prev_link": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Enable link to previous entry"
+			}
+		},
+		"canRead": true,
+		"canWrite": true,
+		"readOptions": {
+			"encoding": "utf-8"
+		},
+		"writeOptions": {
+			"encoding": "utf-8",
+			"prev_link": true
+		}
+	},
+	{
+		"name": "FreeDict",
+		"description": "FreeDict (.tei)",
+		"extensions": [
+			".tei"
+		],
+		"singleFile": true,
+		"optionsProp": {
+			"resources": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Enable resources / data files"
+			},
+			"discover": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Find and show unsupported tags"
+			},
+			"auto_rtl": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Auto-detect and mark Right-to-Left text"
+			},
+			"word_title": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Add headwords title to begining of definition"
+			},
+			"pron_color": {
+				"class": "StrOption",
+				"type": "str",
+				"customValue": true,
+				"comment": "Pronunciation color"
+			},
+			"gram_color": {
+				"class": "StrOption",
+				"type": "str",
+				"customValue": true,
+				"comment": "Grammar color"
+			},
+			"example_padding": {
+				"class": "IntOption",
+				"type": "int",
+				"customValue": true,
+				"comment": "Padding for examples (in px)"
+			}
+		},
+		"canRead": true,
+		"canWrite": false,
+		"readOptions": {
+			"auto_rtl": null,
+			"discover": false,
+			"example_padding": 10,
+			"gram_color": "green",
+			"pron_color": "gray",
+			"word_title": false
+		}
+	},
+	{
+		"name": "GettextPo",
+		"description": "Gettext Source (.po)",
+		"extensions": [
+			".po"
+		],
+		"singleFile": true,
+		"optionsProp": {
+			"resources": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Enable resources / data files"
+			}
+		},
+		"canRead": true,
+		"canWrite": true,
+		"readOptions": {},
+		"writeOptions": {
+			"resources": true
+		}
+	},
+	{
+		"name": "HtmlDir",
+		"description": "HTML Directory",
+		"extensions": [
+			".hdir"
+		],
+		"singleFile": false,
+		"optionsProp": {
+			"encoding": {
+				"class": "EncodingOption",
+				"type": "str",
+				"customValue": true,
+				"comment": "Encoding/charset"
+			},
+			"resources": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Enable resources / data files"
+			},
+			"max_file_size": {
+				"class": "IntOption",
+				"type": "int",
+				"customValue": true,
+				"comment": "Maximum file size in bytes"
+			},
+			"filename_format": {
+				"class": "StrOption",
+				"type": "str",
+				"customValue": true,
+				"comment": "Filename format, default: {n:05d}.html"
+			},
+			"escape_defi": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Escape definitions"
+			},
+			"dark": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Use dark style"
+			},
+			"css": {
+				"class": "StrOption",
+				"type": "str",
+				"customValue": true,
+				"comment": "Path to css file"
+			},
+			"word_title": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Add headwords title to begining of definition"
+			}
+		},
+		"canRead": false,
+		"canWrite": true,
+		"writeOptions": {
+			"css": "",
+			"dark": true,
+			"encoding": "utf-8",
+			"escape_defi": false,
+			"filename_format": "{n:05d}.html",
+			"max_file_size": 102400,
+			"resources": true,
+			"word_title": true
+		}
+	},
+	{
+		"name": "Info",
+		"description": "Glossary Info (.info)",
+		"extensions": [
+			".info"
+		],
+		"singleFile": true,
+		"optionsProp": {},
+		"canRead": true,
+		"canWrite": true,
+		"readOptions": {},
+		"writeOptions": {}
+	},
+	{
+		"name": "JMDict",
+		"description": "JMDict",
+		"extensions": [],
+		"singleFile": true,
+		"optionsProp": {},
+		"canRead": true,
+		"canWrite": false,
+		"readOptions": {}
+	},
+	{
+		"name": "Json",
+		"description": "JSON (.json)",
+		"extensions": [
+			".json"
+		],
+		"singleFile": true,
+		"optionsProp": {
+			"encoding": {
+				"class": "EncodingOption",
+				"type": "str",
+				"customValue": true,
+				"comment": "Encoding/charset"
+			},
+			"enable_info": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Enable glossary info / metedata"
+			},
+			"resources": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Enable resources / data files"
+			},
+			"word_title": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "add headwords title to begining of definition"
+			}
+		},
+		"canRead": false,
+		"canWrite": true,
+		"writeOptions": {
+			"enable_info": true,
+			"encoding": "utf-8",
+			"resources": true,
+			"word_title": false
+		}
+	},
+	{
+		"name": "LingoesLDF",
+		"description": "Lingoes Source (.ldf)",
+		"extensions": [
+			".ldf"
+		],
+		"singleFile": true,
+		"optionsProp": {
+			"newline": {
+				"class": "NewlineOption",
+				"type": "str",
+				"customValue": true,
+				"values": [
+					"\r\n",
+					"\n",
+					"\r"
+				],
+				"comment": "Newline string"
+			},
+			"resources": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Enable resources / data files"
+			},
+			"encoding": {
+				"class": "EncodingOption",
+				"type": "str",
+				"customValue": true,
+				"comment": "Encoding/charset"
+			}
+		},
+		"canRead": true,
+		"canWrite": true,
+		"readOptions": {
+			"encoding": "utf-8"
+		},
+		"writeOptions": {
+			"newline": "\n",
+			"resources": true
+		}
+	},
+	{
+		"name": "OctopusMdict",
+		"description": "Octopus MDict (.mdx)",
+		"extensions": [
+			".mdx"
+		],
+		"singleFile": false,
+		"optionsProp": {
+			"encoding": {
+				"class": "EncodingOption",
+				"type": "str",
+				"customValue": true,
+				"comment": "Encoding/charset"
+			},
+			"substyle": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Enable substyle"
+			},
+			"same_dir_data_files": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Read data files from same directory"
+			},
+			"audio": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Enable audio objects"
+			}
+		},
+		"canRead": true,
+		"canWrite": false,
+		"readOptions": {
+			"audio": false,
+			"encoding": "",
+			"same_dir_data_files": false,
+			"substyle": true
+		}
+	},
+	{
+		"name": "Sdict",
+		"description": "Sdictionary Binary(dct)",
+		"extensions": [
+			".dct"
+		],
+		"singleFile": true,
+		"optionsProp": {},
+		"canRead": true,
+		"canWrite": false,
+		"readOptions": {}
+	},
+	{
+		"name": "SdictSource",
+		"description": "Sdictionary Source (.sdct)",
+		"extensions": [
+			".sdct"
+		],
+		"singleFile": true,
+		"optionsProp": {
+			"enable_info": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Enable glossary info / metedata"
+			},
+			"newline": {
+				"class": "NewlineOption",
+				"type": "str",
+				"customValue": true,
+				"values": [
+					"\r\n",
+					"\n",
+					"\r"
+				],
+				"comment": "Newline string"
+			},
+			"resources": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Enable resources / data files"
+			}
+		},
+		"canRead": false,
+		"canWrite": true,
+		"writeOptions": {
+			"enable_info": true,
+			"newline": "\n",
+			"resources": true
+		}
+	},
+	{
+		"name": "Sql",
+		"description": "SQL (.sql)",
+		"extensions": [
+			".sql"
+		],
+		"singleFile": true,
+		"optionsProp": {
+			"encoding": {
+				"class": "EncodingOption",
+				"type": "str",
+				"customValue": true,
+				"comment": "Encoding/charset"
+			},
+			"info_keys": {
+				"class": "ListOption",
+				"type": "list",
+				"customValue": true,
+				"comment": "List of dbinfo table columns"
+			},
+			"add_extra_info": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Create dbinfo_extra table"
+			},
+			"newline": {
+				"class": "NewlineOption",
+				"type": "str",
+				"customValue": true,
+				"values": [
+					"\r\n",
+					"\n",
+					"\r"
+				],
+				"comment": "Newline string"
+			},
+			"transaction": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Use TRANSACTION"
+			}
+		},
+		"canRead": false,
+		"canWrite": true,
+		"writeOptions": {
+			"add_extra_info": true,
+			"encoding": "utf-8",
+			"info_keys": null,
+			"newline": "<br>",
+			"transaction": false
+		}
+	},
+	{
+		"name": "Stardict",
+		"description": "StarDict (.ifo)",
+		"extensions": [
+			".ifo"
+		],
+		"singleFile": false,
+		"optionsProp": {
+			"stardict_client": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Modify html entries for StarDict 3.0"
+			},
+			"dictzip": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Compress .dict file to .dict.dz"
+			},
+			"sametypesequence": {
+				"class": "StrOption",
+				"type": "str",
+				"customValue": false,
+				"values": [
+					"",
+					"h",
+					"m",
+					"x",
+					null
+				],
+				"comment": "Definition format: h=html, m=plaintext, x=xdxf"
+			},
+			"merge_syns": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Write alternates to .idx instead of .syn"
+			},
+			"xdxf_to_html": {
+				"class": "BoolOption",
+				"type": "bool"
+			},
+			"unicode_errors": {
+				"class": "StrOption",
+				"type": "str",
+				"customValue": false,
+				"values": [
+					"strict",
+					"ignore",
+					"replace",
+					"backslashreplace"
+				],
+				"comment": "What to do with Unicode decoding errors"
+			},
+			"audio_goldendict": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Convert audio links for GoldenDict (desktop)"
+			},
+			"audio_icon": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Add glossary's audio icon"
+			}
+		},
+		"canRead": true,
+		"canWrite": true,
+		"readOptions": {
+			"unicode_errors": "strict",
+			"xdxf_to_html": true
+		},
+		"writeOptions": {
+			"audio_goldendict": false,
+			"audio_icon": true,
+			"dictzip": true,
+			"merge_syns": false,
+			"sametypesequence": "",
+			"stardict_client": false
+		}
+	},
+	{
+		"name": "Tabfile",
+		"description": "Tabfile (.txt, .dic)",
+		"extensions": [
+			".txt",
+			".tab",
+			".tsv"
+		],
+		"singleFile": true,
+		"optionsProp": {
+			"encoding": {
+				"class": "EncodingOption",
+				"type": "str",
+				"customValue": true,
+				"comment": "Encoding/charset"
+			},
+			"enable_info": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Enable glossary info / metedata"
+			},
+			"resources": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Enable resources / data files"
+			},
+			"file_size_approx": {
+				"class": "FileSizeOption",
+				"type": "int",
+				"customValue": true,
+				"comment": "Split up by given approximate file size\nexamples: 100m, 1g"
+			},
+			"word_title": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Add headwords title to begining of definition"
+			}
+		},
+		"canRead": true,
+		"canWrite": true,
+		"readOptions": {
+			"encoding": "utf-8"
+		},
+		"writeOptions": {
+			"enable_info": true,
+			"encoding": "utf-8",
+			"file_size_approx": 0,
+			"resources": true,
+			"word_title": false
+		}
+	},
+	{
+		"name": "WiktionaryDump",
+		"description": "Wiktionary Dump (.xml)",
+		"extensions": [
+			".xml"
+		],
+		"singleFile": false,
+		"optionsProp": {
+			"encoding": {
+				"class": "EncodingOption",
+				"type": "str",
+				"customValue": true,
+				"comment": "Encoding/charset"
+			}
+		},
+		"canRead": true,
+		"canWrite": false,
+		"readOptions": {}
+	},
+	{
+		"name": "Wordset",
+		"description": "Wordset.org JSON directory",
+		"extensions": [],
+		"singleFile": false,
+		"optionsProp": {
+			"encoding": {
+				"class": "EncodingOption",
+				"type": "str",
+				"customValue": true,
+				"comment": "Encoding/charset"
+			}
+		},
+		"canRead": true,
+		"canWrite": false,
+		"readOptions": {
+			"encoding": "utf-8"
+		}
+	},
+	{
+		"name": "Xdxf",
+		"description": "XDXF (.xdxf)",
+		"extensions": [
+			".xdxf"
+		],
+		"singleFile": true,
+		"optionsProp": {
+			"html": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Entries are HTML"
+			}
+		},
+		"canRead": true,
+		"canWrite": false,
+		"readOptions": {
+			"html": true
+		}
+	},
+	{
+		"name": "Zim",
+		"description": "Zim (.zim, for Kiwix)",
+		"extensions": [
+			".zim"
+		],
+		"singleFile": true,
+		"optionsProp": {
+			"skip_duplicate_words": {
+				"class": "BoolOption",
+				"type": "bool",
+				"comment": "Detect and skip duplicate words"
+			}
+		},
+		"canRead": true,
+		"canWrite": false,
+		"readOptions": {
+			"skip_duplicate_words": false
+		}
+	}
+]

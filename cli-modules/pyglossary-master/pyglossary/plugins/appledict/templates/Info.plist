@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleIdentifier</key>
+	<string>{CFBundleIdentifier}</string>
+	<key>CFBundleDisplayName</key>
+	<string>{CFBundleDisplayName}</string>
+	<key>CFBundleName</key>
+	<string>{CFBundleName}</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>DCSDictionaryCopyright</key>
+	<string>{DCSDictionaryCopyright}.</string>
+	<key>DCSDictionaryManufacturerName</key>
+	<string>{DCSDictionaryManufacturerName}.</string>
+	<key>DCSDictionaryXSL</key>
+	<string>{DCSDictionaryXSL}</string>
+	<key>DCSDictionaryDefaultPrefs</key>
+	<dict>
+		{DCSDictionaryDefaultPrefs}
+	</dict>
+	<key>DCSDictionaryPrefsHTML</key>
+	<string>{DCSDictionaryPrefsHTML}</string>
+	{DCSDictionaryFrontMatterReferenceID}
+</dict>
+</plist>
