@@ -7,6 +7,9 @@ name = "pypi"
 python-dotenv = "*"
 flask = "*"
 requests = "*"
+pyglossary = "*"
+prompt-toolkit = "*"
+lxml = "*"
 
 [dev-packages]
 

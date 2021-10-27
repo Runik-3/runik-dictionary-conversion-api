@@ -1,0 +1,3 @@
+pyglossary ../dictionaries/example_input.xdxf ../test.kobo.zip --read-format=Xdxf --write-format=Kobo
+
+            ^ in file                   ^ outfile(ext required)  ^informat                  ^outformat
