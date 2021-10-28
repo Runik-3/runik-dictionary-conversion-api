@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+python-dotenv = "*"
+flask = "*"
+requests = "*"
+pyglossary = "*"
+prompt-toolkit = "*"
+lxml = "*"
+async = "*"
+
+[dev-packages]
+autopep8 = "*"
+
+[scripts]
+server = "python3 server.py"
+
+[requires]
+python_version = "3.9"
