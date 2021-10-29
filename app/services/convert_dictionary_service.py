@@ -19,3 +19,5 @@ def convert_dictionary(target_device, dictionary_title, input_format):
     cmd_array = cmd_string.split()
 
     subprocess.run(cmd_array)
+
+    return output_path
