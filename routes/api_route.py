@@ -4,6 +4,7 @@ from flask import request
 from flask.wrappers import Response
 from flask import send_file
 
+from app.helpers.cleanup_helper import cleanup
 from app.controllers.dictionary_controller import dictionary_handler
 
 api = Blueprint('api', __name__)
@@ -15,5 +16,3 @@ def index(target_device, dictionary_title, input_format, request = request):
     output_path = dictionary_handler(target_device, dictionary_title, input_format, request)
 
     return  send_file(output_path, "appication/zip")
-
-#@api.after_request(cleanup())
