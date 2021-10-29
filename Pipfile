@@ -11,6 +11,7 @@ pyglossary = "*"
 prompt-toolkit = "*"
 lxml = "*"
 async = "*"
+marisa-trie = "*"
 
 [dev-packages]
 autopep8 = "*"
