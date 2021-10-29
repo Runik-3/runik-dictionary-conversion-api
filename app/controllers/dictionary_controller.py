@@ -1,5 +1,5 @@
-from app.services.write_data_file_service import write_data_file 
-from app.services.convert_dictionary_service import convert_dictionary
+from app.helpers.write_data_file_helper import write_data_file 
+from app.helpers.convert_dictionary_helper import convert_dictionary
 
 
 def dictionary_handler(target_device, dictionary_title, input_format, request):
