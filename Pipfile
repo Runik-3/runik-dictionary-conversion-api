@@ -12,6 +12,7 @@ prompt-toolkit = "*"
 lxml = "*"
 async = "*"
 marisa-trie = "*"
+gunicorn = "*"
 
 [dev-packages]
 autopep8 = "*"
