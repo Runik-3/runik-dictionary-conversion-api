@@ -13,6 +13,9 @@ api = Blueprint('api', __name__)
 
 @api.route('/<target_device>/<input_format>/<dictionary_title>', methods=["POST"])
 def index(target_device, dictionary_title, input_format, request = request):
+    
+    print('Processing Dictionary')
+    
 
     output_path = dictionary_handler(target_device, dictionary_title, input_format, request)
 
