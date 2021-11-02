@@ -3,7 +3,7 @@ from flask import request
 from dotenv import load_dotenv
 
 from app.helpers.cleanup_helper import cleanup
-from routes.api_route import api
+from app.routes.api_route import api
 
 load_dotenv()
 
