@@ -9,6 +9,7 @@ RUN pip3 install pipenv
 RUN pip3 install pyglossary
 
 WORKDIR /runik
+VOLUME /runik
 COPY Pipfile ./Pipfile
 COPY Pipfile.lock ./Pipfile.lock
 
