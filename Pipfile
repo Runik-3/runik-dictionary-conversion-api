@@ -20,5 +20,3 @@ autopep8 = "*"
 [scripts]
 server = "python3 server.py"
 
-[requires]
-python_version = "3.9"
