@@ -14,7 +14,6 @@ app.register_blueprint(api, url_prefix='/api')
 @app.route('/')
 def index(): 
 
-    print('test')
     # at some point return text instructions for API
     return 'this is /'
 

@@ -9,7 +9,7 @@ RUN pip3 install pipenv
 RUN pip3 install pyglossary
 
 WORKDIR /runik
-VOLUME /runik
+#VOLUME /runik
 COPY Pipfile ./Pipfile
 COPY Pipfile.lock ./Pipfile.lock
 
@@ -20,4 +20,4 @@ COPY cli-modules ./cli-modules
 COPY server.py ./server.py
 COPY dictionaries ./dictionaries
 
-CMD ["pipenv", "run", "gunicorn", "-b", "0.0.0.0:8000", "server:app", "-t", "160"]
+#CMD ["pipenv", "run", "gunicorn", "-b", "0.0.0.0:8000", "server:app", "-t", "160"]
