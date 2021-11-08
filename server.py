@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import request
 from dotenv import load_dotenv
+from flask_cors import CORS
 
 from app.helpers.cleanup_helper import cleanup
 from app.routes.api_route import api
@@ -9,6 +10,7 @@ load_dotenv()
 
 
 app = Flask(__name__)
+CORS(app)
 app.register_blueprint(api, url_prefix='/api')
 
 @app.route('/')
