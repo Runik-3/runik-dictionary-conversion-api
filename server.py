@@ -6,7 +6,11 @@ from flask_cors import CORS
 from app.helpers.cleanup_helper import cleanup
 from app.routes.api_route import api
 
+from pyglossary.glossary import Glossary
+
 load_dotenv()
+
+Glossary.init()
 
 
 app = Flask(__name__)

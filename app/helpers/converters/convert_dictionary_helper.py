@@ -1,6 +1,7 @@
 from os import system
 from os import path
-import subprocess
+
+from pyglossary.glossary import Glossary
 
 
 def convert_dictionary(dictionary_title, input_format):
@@ -14,9 +15,14 @@ def convert_dictionary(dictionary_title, input_format):
     output_path = path.join(path.dirname(__file__), '..',
                        '..', '..','dictionaries', 'output', f'dicthtml-{dictionary_title}-en.kobo.zip')
 
-    cmd_string = f'pyglossary -v1 {input_path} {output_path} --read-format={input_format} --write-format=Kobo'
-    cmd_array = cmd_string.split()
-
-    subprocess.run(cmd_array)
+    glos = Glossary(
+        info={"title": dictionary_title},
+    )
+    output_path = glos.convert(
+        input_path,
+        inputFormat=input_format,
+        outputFilename=output_path,
+        outputFormat="Kobo",
+    )
 
     return output_path
