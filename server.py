@@ -23,7 +23,7 @@ def index():
     # at some point return text instructions for API
     return 'this is /'
 
-app.after_request(cleanup)
+#app.after_request(cleanup)
 
 if __name__ == '__main__':
     app.run('localhost', 8080)

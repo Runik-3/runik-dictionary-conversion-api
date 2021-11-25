@@ -1,5 +1,5 @@
 from app.helpers.write_data_file_helper import write_data_file 
-from app.helpers.converters.convert_dictionary_helper import convert_kobo_dictionary, convert_kindle_dictionary
+from app.helpers.converters.convert_dictionary_helper import convert_kobo_dictionary, convert_stardict_dictionary
 
 
 def dictionary_handler(target_device, dictionary_title, input_format, request):
@@ -12,10 +12,11 @@ def dictionary_handler(target_device, dictionary_title, input_format, request):
 
     # converts incoming dict from XDXF and returns to the correct format 
     if target_device == 'kobo': 
-        print('hitting kobo')
         output_path = convert_kobo_dictionary(dictionary_title, input_format)
-    elif target_device == 'kindle': 
-        output_path = convert_kindle_dictionary(dictionary_title, input_format)
+
+    elif target_device == 'stardict': 
+        output_path = convert_stardict_dictionary(dictionary_title, input_format)
+
     else:
         output_path = False
 

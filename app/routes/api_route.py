@@ -20,7 +20,6 @@ def index(target_device, dictionary_title, input_format, request = request):
     print('Processing Dictionary...')
     
     output_path = dictionary_handler(target_device, dictionary_title, input_format, request)
-    print(output_path)
 
     if output_path: 
         print('Sending dictionary to client')
