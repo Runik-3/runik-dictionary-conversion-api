@@ -16,7 +16,6 @@ COPY Pipfile.lock ./Pipfile.lock
 RUN pipenv install --deploy --system
 
 COPY app ./app
-COPY cli-modules ./cli-modules
 COPY server.py ./server.py
 COPY dictionaries ./dictionaries
 
