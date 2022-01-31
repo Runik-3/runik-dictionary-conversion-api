@@ -75,8 +75,8 @@ Contributions are what make the open source community such an amazing place to l
 
 This project exists thanks to all the people who contribute.
 <br/>
-<a href="https://github.com/Runik-3/runik-app/graphs/contributors">
-<img src="https://contrib.rocks/image?repo=runik-3/runik-app" height="40"/>
+<a href="https://github.com/Runik-3/runik-dictionary-conversion-api/graphs/contributors">
+<img src="https://contrib.rocks/image?repo=runik-3/runik-dictionary-conversion-api" height="40"/>
 </a>
 
 <!-- TESTING -->
